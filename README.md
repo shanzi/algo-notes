@@ -1,4 +1,4 @@
-# Introduction
+# Intro
 
 This book contains notes I have taken while learning and practicing algorithm problems. Some of knowledge
 is drawn from related books such as *Programing Pearls*, *Cracking the Coding Interview* and so on.
