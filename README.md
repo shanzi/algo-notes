@@ -2,7 +2,8 @@
 
 This book contains notes I have taken while learning and practicing algorithm problems. Some of knowledge
 is drawn from related books such as *Programing Pearls*, *Cracking the Coding Interview* and so on.
-I will also put small, trivial but useful things occurred while solving an algorithm problem in the book.
+I also will include put small, trivial but useful things occurred while solving an algorithm problem, 
+so the content of this book may come from everywhere. In fact, I just put anything I think is useful here.
 
 The notes will be separated in three main parts:
 
@@ -18,4 +19,4 @@ Please notice that this book is still **under construction**. I intend to finish
 # Licence
 
 This book is released under
-[Creative Commons Attribution NonCommercial-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-nc-sa/4.0/)
+[Creative Commons Attribution NonCommercial-ShareAlike 4.0 International](http://creativecommons.org/licenses/by-nc-sa/4.0/).
