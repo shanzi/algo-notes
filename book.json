@@ -2,7 +2,7 @@
   "gitbook": ">=2.0.0",
   "title": "Algorithm Notes",
   "plugins": [
-    "mathjax",
+    "mathjax4us",
     "include-highlight"
   ]
 }
