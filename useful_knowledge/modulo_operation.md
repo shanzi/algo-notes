@@ -18,7 +18,7 @@ The following are common operation rules of modulo:
     1. $$(a - b) \% p = (a \% p - b \% p) \% p$$
     1. $$(a \times b) \% p = (a \% p \times b \% p)\% p$$
     1. $$(a \hat{} b) \% p = (a \% p \hat{} b \% p)\% p$$
-2. Associative Lay:
+2. Associative Law:
     1. $$[(a + b) \% p + c] \% p = [a + (b + c) \% p] \% p$$
     1. $$[(a \times b) \% p \times c] \% p = [a \times (b \times c) \% p] \% p$$
 3. Distributive Law(with multiplication):
