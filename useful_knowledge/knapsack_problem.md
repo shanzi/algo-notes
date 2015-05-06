@@ -270,5 +270,5 @@ int solve() {
 ```
 
 Reuse the same array to reduce the matrix to be an array to save space is a common technique
-for Dynamic Programming. But the reduced code is usually not as apparently and easy to explain
+for Dynamic Programming. But the reduced code is usually not as apparent and easy to explain
 as the original. Think twice before you'd like to use this technique during an interview!
