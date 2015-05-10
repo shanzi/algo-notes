@@ -99,6 +99,11 @@ TreeNode findCommonAncester(TreeNode root, TreeNode a, TreeNode b) {
 }
 ```
 
+Let's say the tree has $$N$$ nodes. The time cost of the algorithm is $$O(N)$$ as in the worst case,
+every node will be visited once. As them use recursion. The average space cost is $$O(\log N)$$.
+But in the worst case, the space complexity may be $$O(N)$$ and if $$N$$ is very large, it will
+stack overflow.
+
 ## Multiple children
 
 If the tree is not a binary tree, the problem must be upgrade. Here we only discuss
@@ -131,6 +136,9 @@ TreeNode findCommonAncester(TreeNode root, TreeNode a, TreeNode b) {
     else return findb;
 }
 ```
+
+The time complexity is also $$O(N)$$. The worst space cost is $$O(N)$$, so it is susceptible
+to stack overflow error too.
 
 ## Node has pointer to parent
 
@@ -172,3 +180,16 @@ TreeNode findCommonAncester(TreeNode a, TreeNode b) {
 The program above should be able to handle both binary tree or tree has multiple children, not only
 when both two nodes present in the tree, but also when one or more are not exist.
 
+This problem is usually better than the older one when the parent pointer presents. We can also
+get all ancesters easily. The time complexity is $$O(\log N)$$ where $$N$$ is the number of nodes.
+Compared the recursive solution, this solution is obviously faster and not vulnerable to stack
+overflow error. But it requires the `TreeNode` has an extra field. If this field is originally exist,
+that is good, or it might not be suitable. The space complexity is $$O(\log N)$$.
+
+Suggestions when faced with this problem in an interview:
+
+1. if the `TreeNode` can be self defined. Just use the last algorithm. It has many advantages
+and does not easily to be wrong.
+2. if `TreeNode` is given and no parent pointer allowed, remember to mention this solution apart
+from the recursive one. What's more, gives the shortcomings of the recursive solutions and
+in what way this algorithm is better.
