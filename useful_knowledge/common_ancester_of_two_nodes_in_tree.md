@@ -1,4 +1,4 @@
-# Common Ancester of Tree
+# Common Ancester of Two Nodes in Tree
 
 Common Ancester of Tree is said to be a very common problem asked during an interview.
 This problem is not a hard one, but there are still several points should be carefully
@@ -11,7 +11,7 @@ this problem should always be making sure if the tree in the question is a binar
 
 Then, if you are sure it is about binary tree, then the following is related notes.
 
-## Binary Tree
+## Binary tree
 
 The tree to find common ancester in is a binary tree, and let's say we have two nodes and
 these two nodes are guaranteed exist in the tree (This is one point that you should make
@@ -37,7 +37,7 @@ exactly once recursively and find a node follows the conditions below or vice ve
 Note, both A and B might be the common ancester too. So a simple program to solve the
 problem might be:
 
-```
+```java
 TreeNode findCommonAncester(TreeNode root, TreeNode a, TreeNode b) {
     if (root == null) return null;
     if (root == a || root == b) return root;
@@ -46,8 +46,8 @@ TreeNode findCommonAncester(TreeNode root, TreeNode a, TreeNode b) {
     TreeNode right = findCommonAncester(root.right, a, b);
     
     if (left != null && right != null) return root;
-    else if (left == null) return right;
-    else return left;
+    else if (left != null) return left;
+    else return right;
 }
 ```
 
@@ -99,4 +99,76 @@ TreeNode findCommonAncester(TreeNode root, TreeNode a, TreeNode b) {
 }
 ```
 
+## Multiple children
+
+If the tree is not a binary tree, the problem must be upgrade. Here we only discuss
+the case that both two nodes to find ancester are exist in the tree. At first we
+must change the data structure of the TreeNode.
+
+```java
+class TreeNode {
+    List<TreeNode> children;
+    int value;
+}
+```
+
+The program to find the common ancester doesn't change a lot from the binary tree's program.
+A node is the first common ancester if and only if the two node are in different child tree of this node.
+
+```java
+TreeNode findCommonAncester(TreeNode root, TreeNode a, TreeNode b) {
+    if (root == null) return null;
+    if (root == a || root == b) return root;
+
+    TreeNode finda = null;
+    TreeNode findb = null;
+    for (TreeNode n : root.children) {
+        if (n == a) finda = a;
+        else if (n == b) findb = b;
+    }
+    if (finda != null && findb != null) return root;
+    else if (finda != null) return finda;
+    else return findb;
+}
+```
+
+## Node has pointer to parent
+
+If the Node has a pointer to parent or we can easily get the path from root to the two nodes,
+there is another way to find the most common ancester. At first we get two path from root
+to node a and b. Then we check from the root one by one parallel until at some position,
+two nodes are different. The first common ancester stands exactly one step before that position.
+
+We implemented this using a `LinkedList` in java:
+
+```java
+TreeNode {
+    //...
+    TreeNode parent; // the pointer to the parent
+}
+
+TreeNode findCommonAncester(TreeNode a, TreeNode b) {
+    LinkedList<TreeNode> apath = new LinkedList<TreeNode>();
+    LinkedList<TreeNode> bpath = new LinkedList<TreeNode>();
+    while (a != null) {
+        apath.addFirst(a);
+        a = a.parent;
+    }
+    while (b != null) {
+        bpath.addFirst(b);
+        b = b.parent;
+    }
+    TreeNode node = null;
+    while ((!apath.isEmpty()) && (!bpath.isEmpty())) {
+        TreeNode m = apath.pollFirst();
+        TreeNode n = bpath.pollFirst();
+        if (m == n) node = m;
+        else break;
+    }
+    return node;
+}
+```
+
+The program above should be able to handle both binary tree or tree has multiple children, not only
+when both two nodes present in the tree, but also when one or more are not exist.
 
