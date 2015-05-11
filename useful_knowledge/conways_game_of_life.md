@@ -206,5 +206,5 @@ and `Map` is used. In our case, we assume the `HashSet` and `HashMap` can provid
 and find an element, then the total time cost for a single generation is $$O(N)$$ where $$N$$ is the number
 of live cells on the board currently. The space cost is $$O(N)$$ too.
 
-The last solution is usually the best one if you can using self-defined data structures. It is also
-good to mention the first to solutions as references.
+The last solution is usually the best one if you can use self-defined data structures. It is also
+good to mention the first two solutions as references.
