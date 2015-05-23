@@ -11,5 +11,6 @@
     * [Common Ancester of Two Nodes in Tree](/useful_knowledge/common_ancester_of_two_nodes_in_tree.md)
     * [Path Sum on Tree](/useful_knowledge/path_sum_on_tree.md)
     * [Weighted Random Distribution](/useful_knowledge/weighted_random_distribution.md)
+    * [Bitset Operations](/useful_knowledge/bitset_operations.md)
 * [Problem Solutions](/problem_solutions/README.md)
 * [Other Things](/other_things/README.md)
