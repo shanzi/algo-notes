@@ -111,7 +111,7 @@ with capacity $$j$$. Then we know $$dp_{0, j}$$ will be the solution to our prob
 dp_{i,j} = \left\{ 
     \begin{array}{l l}
          dp_{i+1,j} & \quad j < w_i\\
-        \max \{dp_{i+1, j}, dp{i+1,j-w_i}\} + v_i & \quad \text{otherwise}
+        \max \{dp_{i+1, j}, dp_{i+1,j-w_i}\} + v_i & \quad \text{otherwise}
     \end{array} \right.
 {% endmath %}
 
@@ -146,7 +146,7 @@ and
 dp_{i + 1,j} = \left\{ 
     \begin{array}{l l}
          dp_{i,j} & \quad j < w_{i}\\
-        \max \{dp_{i, j}, dp{i,j-w_i}\} + v_{i} & \quad \text{otherwise}
+        \max \{dp_{i, j}, dp_{i,j-w_i}\} + v_{i} & \quad \text{otherwise}
     \end{array} \right.
 {% endmath %}
 
