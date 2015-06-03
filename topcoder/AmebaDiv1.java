@@ -14,7 +14,7 @@ public class AmebaDiv1 {
                 }
             }
             if (set.contains(v)) {
-                set2.add(v)
+                set2.add(v);
             }
         }
         return set.size() - set2.size();

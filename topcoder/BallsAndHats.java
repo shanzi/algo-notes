@@ -1,4 +1,4 @@
-public class BallAndHats {
+public class BallsAndHats {
     public int getHat(String hats, int numSwaps) {
         if (numSwaps == 0) {
             for (int i = 0; i < 3; i++) {
