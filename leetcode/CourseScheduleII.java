@@ -1,14 +1,14 @@
 import java.util.*;
 
-public class CourseSchedule {
-    public boolean canFinish(int numCourses, int[][] prerequisites) {
+public class CourseScheduleII {
+    public int[] findOrder(int numCourses, int[][] prerequisites) {
         HashMap<Integer, HashSet<Integer>> outedges = new HashMap<Integer, HashSet<Integer>>();
         HashMap<Integer, HashSet<Integer>> inedges = new HashMap<Integer, HashSet<Integer>>();
         
         for (int i = 0; i < prerequisites.length; i++) {
             int out = prerequisites[i][0];
             int in = prerequisites[i][1];
-            if (in < 0 || in >= numCourses) return false;
+            if (in < 0 || in >= numCourses) return new int[0];
             if (out < 0 || out >= numCourses) continue;
             
             if (outedges.containsKey(in)) {
@@ -30,14 +30,18 @@ public class CourseSchedule {
         
         LinkedList<Integer> removequeue = new LinkedList<Integer>();
         
-        for (int n : outedges.keySet()) {
+        for (int n = 0; n < numCourses; n++) {
             if (!inedges.containsKey(n)) {
                 removequeue.addLast(n);
             }
         }
+
+        int[] res = new int[numCourses];
+        int p = -1;
             
         while(!removequeue.isEmpty()) {
             int toremove = removequeue.pollFirst();
+
             if (outedges.containsKey(toremove)){
                 for(int i : outedges.get(toremove)) {
                     HashSet<Integer> edgesSet = inedges.get(i);
@@ -47,10 +51,12 @@ public class CourseSchedule {
                         inedges.remove(i);
                     }
                 }
+                outedges.remove(toremove);
             }
-            outedges.remove(toremove);
+            res[++p] = toremove;
         }
-        
-        return outedges.isEmpty();
+
+        if (outedges.isEmpty()) return res;
+        return new int[0];
     }
 }
