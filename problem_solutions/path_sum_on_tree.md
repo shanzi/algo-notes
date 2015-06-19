@@ -251,3 +251,54 @@ In fact, it is a real problem used to be presented during an interview.
 
 You will definitely pass an interview if you have a goal higher than it
 and keep working on!
+
+## Save partial results in tree
+
+If the tree structure can be defined by yourself, you should could think of a solution
+to save the partial result in tree nodes. Even it is not allowed, we can always
+be able to relate some other data to nodes. Althought it will cost more space,
+but it is a tradeoff. Sense of tradeoff is one of things they'd like to exammine on you, remember it?
+
+Let's say we can add one additional fields in the node. We use it to record the maximum partial sum
+from bottom to top that end at current node. So the tree node is looks like:
+
+```java
+class TreeNode {
+    TreeNode left;
+    TreeNode right;
+    int val;
+
+    int sum; // an additional field
+}
+```
+
+Take advatage of the thinking of maximum path sum. The code to get the path sum will be:
+
+```java
+int maximumSum(TreeNode root) {
+    if (root == null) return 0;
+    
+    int left = maximumSum(root.left);
+    int right = maximumSum(root.right);
+
+    int leftsum = (root.left == null) ? 0 : root.left.sum;
+    int rightsum = (root.left == null) ? 0 : root.right.sum;
+
+    root.sum = Math.max(Math.max(leftsum, rightsum) + root.val, 0);
+    
+    total = leftsum + rightsum + root.val;
+    return Math.max(Math.max(left, right), total);
+}
+```
+
+This problem always return 0 if a positive sum path can not be found. We performing
+recursive calls first to give the sum field the right value on root's left and right node.
+Then we retrieve the sum and find the max path sum ends at current node.
+The path may from the left or the right subtree. But the sum should definitely greater than 0.
+Then we also use the sum from to subtree to find the maxinum sum path through current node.
+The function finally returns the greatest sum value among left max, right max and current max.
+
+What we should learn from this solution is that, don't limit your mind. You can do anything
+to the structures you are using and let it as convenient as possible to you!
+Don't care about the space cost first or take the tradeoff into consider and avoid to come up
+with the best answer at the first glance at the problem.
