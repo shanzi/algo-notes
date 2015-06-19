@@ -13,4 +13,5 @@
     * [Weighted Random Distribution](/useful_knowledge/weighted_random_distribution.md)
     * [Bitset Operations](/useful_knowledge/bitset_operations.md)
 * [Problem Solutions](/problem_solutions/README.md)
+    * [Power of Two](/problem_solutions/power_of_two.md)
 * [Other Things](/other_things/README.md)
