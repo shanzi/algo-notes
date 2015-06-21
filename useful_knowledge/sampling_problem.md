@@ -127,6 +127,59 @@ for i, l in enumerate(f.readlines(), 1):
         selected = l
 ```
 
+### Reservoir sampling
+
+The solution above in fact has a name reservior sampling.
+
+Reservoir sampling is a family of sampling algorithm to solve a class of problems that
+the total set to sample from is very big or the size is not known when sampling is begin.
+
+Other than the simplest instance of similar problems where we just need to choose one line,
+another variation might be that exactly $$k$$ lines is required to be picked. Similar to
+the one line version, at first we can pick the first $$k$$ lines by default.
+And for a line $$i$$ after $$k$$, we choose it by a probability of $$\frac{k}{i}$$ and
+replace one line from current chosen lines.
+
+To be more clear, at line $$i$$ we generate a random number $$r$$ between $$1$$ and $$i$$,
+if $$r \ge k$$ we replace the $$r$$th line in current selected lines. Otherwise, we do nothing.
+A sample code might be like;
+
+
+```python
+import random
+
+# f is a file with unknown length
+selected = []
+
+for i, l in enumerate(f.readlines(), 1):
+    if i < k: selected.append(l)
+    else:
+        r = random.randint(1, i)
+        if r < k:
+            selected[r] = l
+```
+
+To prove this solution is correct, let's apply mathematic induction. Assume at the $$i$$th line
+this solution is correct. That is for each line numbered from $$0$$ to $$i - 1$$ is chosen
+with a probability of $$\frac{k}{i}$$. Then here come the $$(i + 1)$$th line. It is obviously
+we will pick this line by a probability of $$\frac{k}{i + 1}$$. Then for each current chosen lines,
+one might be chosen to be replaced at a probability of $$\frac{1}{k}$$.
+So at the $$(i + 1)$$th line, one line chosen before has a probability of
+$$\frac{k}{i + 1}\frac{1}{k}=\frac{1}{i + 1}$$ to be dropped. As after the $$(i + 1)$$th line
+is processed, one line must not has  been replaced to be left and the total probability
+will become:
+
+{% math %}
+\frac{1}{i}(1 - \frac{1}{i + 1}) = \frac{1}{i + 1}
+{% endmath %}
+
+That is, after the $$(i + 1)$$th line is processed, every line has a probability of $$\frac{1}{i + 1}$$
+to be left in the chosen set. Thus the solution is correct that at last every line has the same likelyhood
+to be chosen.
+
+For more details about reservoir sampling algorithm please refer to
+[Reservoir sampling](https://en.wikipedia.org/wiki/Reservoir_sampling).
+
 ## Floyd Algorithm
 
 Floyd Algorithm is a series of methods of our $$m$$ out of $$n$$ method.
@@ -206,3 +259,4 @@ algorithms contains exactly the same items.
 2. For any combinations of $$n$$ items, the number of arrangements of them are all $$n!$$.
 3. So if the arrangement generation algorithm is correct, then the combination generation
 algorithm is correct too.
+
