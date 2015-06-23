@@ -1,3 +1,12 @@
+/*
+ * No matter how the circuits is constructed, the final resistance of the total circuits
+ * is the sum of a sub set of all conductors. The more items the sub set contains,
+ * the higher the resistance will be if we always uses the conductors from highest resistance
+ * greedily. So to solve this problem we just need to find the largest number of conductors
+ * that have effect on the result.
+ *
+ */
+
 import java.util.Arrays;
 
 public class CircuitsConstruction {
