@@ -14,4 +14,5 @@
     * [Power of Two](/problem_solutions/power_of_two.md)
     * [Common Ancester of Two Nodes in Tree](/problem_solutions/common_ancester_of_two_nodes_in_tree.md)
     * [Path Sum on Tree](/problem_solutions/path_sum_on_tree.md)
+    * [Invert Binary Tree](/problem_solutions/invert_binary_tree.md)
 * [Other Things](/other_things/README.md)
