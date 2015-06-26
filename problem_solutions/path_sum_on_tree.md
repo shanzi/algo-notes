@@ -19,7 +19,7 @@ In this chapter, we always assume the trees are binary trees.
 
 One kind of path sum problem is in a case that all path concerned to this problem starts
 from the root node. The presence of this condition should be made clear before any further
-consideration.
+consideration. See this problem [on LeetCode](https://leetcode.com/problems/path-sum/).
 
 The simplest case of this problem is that the path always start from the root to the leaves.
 All value on the nodes is positive is a equivalent condition to the previous.
@@ -112,6 +112,8 @@ Sum maxPathSum(TreeNode root) {
 ```
 
 ## Path sum from any node to any node
+
+See this problem [on LeetCode](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
 
 Now we comes to the ultimate problem of this kind, the path we get can start from any node
 and end at any node. As it is tree we are talking about, so any path on the tree has the following
