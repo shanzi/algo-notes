@@ -17,6 +17,7 @@
         * [Weighted Random Distribution](/problem_solutions/weighted_random_distribution.md)
         * [Max XOR sub sequence](/problem_solutions/max_xor_sub_sequence.md)
         * [History Query on Stack](/problem_solutions/history_query_on_stack.md)
+        * [Partition Problem](/problem_solutions/partition_problem.md)
     * LeetCode
         * [Invert Binary Tree](/problem_solutions/invert_binary_tree.md)
         * [Rectangle Area](/problem_solutions/rectangle_area.md)
