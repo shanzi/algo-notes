@@ -49,7 +49,7 @@ array = range(n)
 
 for i in range(n):
     # swap two element of an array
-    swap(array, i, random.randint(0, n - 1))
+    swap(array, i, random.randint(i, n - 1))
 
 res = array[:m]
 ```
@@ -226,7 +226,7 @@ a larger collection. There are also a set of shuffling or arrangements problem w
 The difference between a combination and a arrangement is that for a combination, the order
 of the elements does not matter.
 
-Apart from the shuffling algorithm mentioned above, there are also a method derived from that recursion verion
+Apart from the shuffling algorithm mentioned below, there are also a method derived from that recursion verion
 of Floyd algorithm. To achieve this, we just need replace the `set` with `list` and modify the insert operation
 a little.
 

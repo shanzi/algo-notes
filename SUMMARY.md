@@ -15,6 +15,7 @@
         * [Knapsack Problem](/problem_solutions/knapsack_problem.md)
         * [Conway's Game of Life](/problem_solutions/conways_game_of_life.md)
         * [Weighted Random Distribution](/problem_solutions/weighted_random_distribution.md)
+        * [Max XOR sub sequence](/problem_solutions/max_xor_sub_sequence.md)
     * LeetCode
         * [Invert Binary Tree](/problem_solutions/invert_binary_tree.md)
         * [Rectangle Area](/problem_solutions/rectangle_area.md)
