@@ -34,10 +34,12 @@ Say `R[i] = R[0..i]`, from the highest bit of `R[i]`, if it is a `0`, we try to 
 a set of `R[j]` where `j < i` that `R[j] ^ R[i]` has an 1 at that position. Conversely,
 it is a `1`, we find a set let the `1` to be left. After this, we check the second highest bit
 and find sub set from the set from last iteration. We aways add `0` in the set to enable
-to find a way to let `R[i]` to be itself left.
+to find a way to let `R[i]` to be itself left. Time cost of this algorithm is $$O(N\log N)$$
+as query a Trie has a time cost of $$O(\log N)$$.
 
 To perform the sub set finding operation fast, we can use a Trie or Prefix Tree.
 The following code shows a combination example of this algorithm. We uses the first
 algorithm to validate the result.
 
 !CODEFILE "../common/MaxXORSubSequence.java"
+
