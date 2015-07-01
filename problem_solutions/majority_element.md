@@ -1,6 +1,7 @@
 # Majority Element
 
-Majority Element is a classical problem. There are two algorithm is know can solve this problem
+## Appearing more than $$N / 2$$ times
+This type of majority element problem is a classical problem. There are two algorithm is know can solve this problem
 in a time cost of $$O(N)$$.
 
 The first is that we find the median number in the array, it must be the majority element.
@@ -73,3 +74,63 @@ public class Solution {
 
 More description on Moore voting algorithm and other algorithms please refer to
 the [solution page](https://leetcode.com/problems/majority-element/solution/) on LeetCode.
+
+## Appearing more than $$N / 3$$ times
+
+One step harder, how to find elements that appears more than $$N / 3 $$ times? At first we know,
+there are at most two element which can appear more than $$N / 3$$ times and as to make use of
+the Moore voting algorithm described above we need a tweak that let one type of elements appears
+more than $$N / 2$$ times.
+
+Thus we maintain a set which contains two items, apply Moore algorithm on elements in the set against
+all other elements. That is, if a element is in the set, increase its vote count by 1. Otherwise,
+we decrease vote count of every element by 1. The total vote of all elements in the set will
+exceed $$N / 2$$ so that Moore voting algorithm will give a result that contains all such majority elements,
+but it is possible that there are numbers not are mojority elements left in the set. So we have to
+check each element to make sure it appears more than $$N / 3$$ times.
+
+Obviously, we can easily generalize this method to $$N / k$$ cases.
+
+```java
+public class MajorityElementII {
+    private int count(int[] nums, int value) {
+        int count = 0;
+        for (int e : nums) {
+            count += (e == value) ? 1 : 0;
+        }
+        return count;
+    }
+    
+    public List<Integer> majorityElement(int[] nums) {
+        ArrayList<Integer> result = new ArrayList<Integer>(2);
+        int firstCount = 0;
+        int secondCount = 0;
+        int first = 0;
+        int second = 0;
+        
+        for (int e : nums) {
+            if (firstCount == 0 || e == first) {
+                firstCount++;
+                first = e;
+            } else if (secondCount == 0 || e == second) {
+                secondCount++;
+                second = e;
+            } else {
+                firstCount--;
+                secondCount--;
+            }
+        }
+        
+        if (count(nums, first) > nums.length / 3) result.add(first);
+        if (count(nums, second) > nums.length / 3) {
+            if (result.size() == 0 || (result.size() > 0 && result.get(0) != second)) {
+                result.add(second);
+            } 
+        }
+        
+        return result;
+    }
+}
+```
+
+
