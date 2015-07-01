@@ -46,4 +46,5 @@
         * [Same Tree](/problem_solutions/same_tree.md)
         * [Merge Sorted Array/List](/problem_solutions/merge_sorted_array.md)
         * [Climbing Stairs](/problem_solutions/climbing_stairs.md)
+        * [Add Binary](/problem_solutions/add_binary.md)
 * [Other Things](/other_things/README.md)
