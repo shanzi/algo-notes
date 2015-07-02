@@ -48,4 +48,7 @@
         * [Climbing Stairs](/problem_solutions/climbing_stairs.md)
         * [Add Binary](/problem_solutions/add_binary.md)
         * [Implement strStr()](/problem_solutions/implement_strstr.md)
+        * [Palindrome Number](/problem_solutions/palindrome_number.md)
+        * [String To Integer](/problem_solutions/string_to_integer.md)
+        * [Kth Smallest Element in a BST](/problem_solutions/kth_smallest_element_in_a_bst.md)
 * [Other Things](/other_things/README.md)
