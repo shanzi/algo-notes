@@ -43,3 +43,40 @@ algorithm to validate the result.
 
 !CODEFILE "../common/MaxXORSubSequence.java"
 
+## Similar questions
+
+There are two similar questions, which is described at stackoverflow:
+[Two elements in array whose xor is maximum](http://stackoverflow.com/questions/9320109/two-elements-in-array-whose-xor-is-maximum)
+and
+[Finding the max XOR of two numbers in an interval](http://cs.stackexchange.com/questions/29508/finding-the-max-xor-of-two-numbers-in-an-interval-can-we-do-better-than-quadrat).
+
+The first one is a mutation of this problem, but the answer given provide a way
+other than Trie to find a pair of number.
+
+In the second question, the number in the range is sorted and all integers a from a interval.
+Thus we will have a $$O(\log N)$$ solution. Let's say the interval is from `x` to `y` inclusive.
+From higher bits to lower bits there will be some bits are the same in `x` and `y`, thus
+any integer between `x` and `y` will have the same prefix. Then at the first bit that is different,
+as `y` is greater than `x`, thus there must be a `1` at that position of `y` and `0` of `x`.
+
+And we know, if we drop the common prefix and only consider bits from that prosition,
+`01111..1` must be greater than `x` and less than `y`. The same to `10000..0`. So let these two
+suffix perform `XOR`, we will get `11111..1`. Thus, the largest `XOR` result from two elements
+in the interval must in a form like `0..000111..1` and `1` begins at the highest different bits
+of `x` and `y`.
+
+We can use `x ^ y` to find that position. Sample code:
+
+```java
+class MaxXORInAnInterval {
+    public int max(int x, int y) {
+        if (x < 0 && y >=0) x = 0;
+
+        int diff = x ^ y;
+        while ((diff & (diff - 1)) != 0) {
+            diff = diff & (diff - 1);
+        }
+        return (diff << 1) - 1;
+    }
+}
+```
