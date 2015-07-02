@@ -51,4 +51,6 @@
         * [Palindrome Number](/problem_solutions/palindrome_number.md)
         * [String To Integer](/problem_solutions/string_to_integer.md)
         * [Kth Smallest Element in a BST](/problem_solutions/kth_smallest_element_in_a_bst.md)
+        * [Basic Calculator](/problem_solutions/basic_calculator.md)
+        * [Count Complete Tree Nodes](/problem_solutions/count_complete_tree_nodes.md)
 * [Other Things](/other_things/README.md)
