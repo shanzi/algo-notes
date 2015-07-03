@@ -56,4 +56,5 @@
         * [Maximal Rectangle Square](/problem_solutions/maximal_rectangle_square.md)
         * [Combination Sum](/problem_solutions/combination_sum.md)
         * [Kth Largest Element in an Array](/problem_solutions/kth_largest_element_in_an_array.md)
+        * [Minimum Size Subarray Sum](/problem_solutions/minimum_size_subarray_sum.md)
 * [Other Things](/other_things/README.md)
