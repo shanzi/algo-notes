@@ -57,4 +57,6 @@
         * [Combination Sum](/problem_solutions/combination_sum.md)
         * [Kth Largest Element in an Array](/problem_solutions/kth_largest_element_in_an_array.md)
         * [Minimum Size Subarray Sum](/problem_solutions/minimum_size_subarray_sum.md)
+        * [Add and Search Word](/problem_solutions/add_adn_search_word.md)
 * [Other Things](/other_things/README.md)
+    * [English Words](/other_things/english_words.md)
