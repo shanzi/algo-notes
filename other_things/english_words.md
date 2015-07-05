@@ -6,4 +6,14 @@ only remember the spelling but also the pronounciation.
 ## Nouns
 
 1. Directed **acyclic** graph
-2. **Topolagical** sorting
+2. **Topological** sorting
+3. **Trie**
+4. Coordinate
+5. pre-order/in-order/post-order
+6. Lexicographic/alphabet order
+
+
+## Adjective/Adverb
+
+1. Feasible
+2. Respective/Respectively
