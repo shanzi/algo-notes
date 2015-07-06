@@ -11,6 +11,11 @@ only remember the spelling but also the pronounciation.
 4. Coordinate
 5. pre-order/in-order/post-order
 6. Lexicographic/alphabet order
+7. Quotient
+8. Fraction/ fractional part
+9. Numerator
+10. Denominator
+
 
 
 ## Adjective/Adverb
