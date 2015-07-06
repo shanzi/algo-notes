@@ -22,3 +22,4 @@ only remember the spelling but also the pronounciation.
 
 1. Feasible
 2. Respective/Respectively
+3. Adjoined/adjoining
