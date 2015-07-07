@@ -127,14 +127,14 @@ public class CoinsGameEasy {
     public int minimalSteps(String[] board) {
         BoardState initState = initialState(board);
         HashSet<BoardState> visitedStates = new HashSet<BoardState>();
-        ArrayList<BoardState> quene = new ArrayList<BoardState>();
-        quene.add(initState);
+        ArrayList<BoardState> queue = new ArrayList<BoardState>();
+        queue.add(initState);
         int steps = 0;
 
-        while (steps < 10 && !quene.isEmpty()) {
-            ArrayList<BoardState> nquene = new ArrayList<BoardState>();
+        while (steps < 10 && !queue.isEmpty()) {
+            ArrayList<BoardState> nqueue = new ArrayList<BoardState>();
             steps++;
-            for (BoardState state : quene) {
+            for (BoardState state : queue) {
                 visitedStates.add(state);
                 for (int i = 0; i < 4; i++) {
                     BoardState newState = state.move(board, i);
@@ -143,11 +143,11 @@ public class CoinsGameEasy {
                     }
 
                     if (newState.shouldEnd(board) || visitedStates.contains(newState)) continue;
-                    nquene.add(newState);
+                    nqueue.add(newState);
                 }
             }
 
-            quene = nquene;
+            queue = nqueue;
         }
 
         return -1;

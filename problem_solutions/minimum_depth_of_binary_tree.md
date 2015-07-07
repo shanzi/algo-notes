@@ -2,7 +2,7 @@
 
 Find the shortest path length from root to any of the leaves. A simple BFS problem.
 Note that using DFS in this problem is vulnerable to `StackOverflowError`.
-We are using a `LinkedList` as quene and using two pointer to mark end of a level.
+We are using a `LinkedList` as queue and using two pointer to mark end of a level.
 
 ```java
 /**
