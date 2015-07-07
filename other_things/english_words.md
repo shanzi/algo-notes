@@ -15,6 +15,8 @@ only remember the spelling but also the pronounciation.
 8. Fraction/ fractional part
 9. Numerator
 10. Denominator
+11. Queue /kju:/
+12. Operand
 
 
 
@@ -23,3 +25,9 @@ only remember the spelling but also the pronounciation.
 1. Feasible
 2. Respective/Respectively
 3. Adjoined/adjoining
+4. Divisible
+
+## Phrase
+
+1. On the contrary
+2. Conversely
