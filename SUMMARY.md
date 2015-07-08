@@ -73,5 +73,8 @@
         * [Linked List Cycle](problem_solutions/linked_list_cycle.md)
         * [Word Break](problem_solutions/word_break.md)
         * [Single Number](problem_solutions/single_number.md)
+        * [Number of Digit One(Two)](problem_solutions/number_of_digit_one.md)
+        * [Gas Station](problem_solutions/gas_station.md)
+        * [Word Ladder](problem_solutions/word_ladder.md)
 * [Other Things](other_things/README.md)
     * [English Words](other_things/english_words.md)
