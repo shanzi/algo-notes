@@ -22,7 +22,7 @@
         * [Cut Tiles](problem_solutions/cut_tiles.md)
         * [Implement Trie](problem_solutions/implement_trie.md)
         * [Union Find](problem_solutions/union_find.md)
-        * [Implement Valid Binary Search](problem_solutions/implement_strstr.md)
+        * [Implement Valid Binary Search](problem_solutions/implement_valid_binary_search.md)
     * LeetCode
         * [Invert Binary Tree](problem_solutions/invert_binary_tree.md)
         * [Rectangle Area](problem_solutions/rectangle_area.md)
