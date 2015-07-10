@@ -6,6 +6,7 @@
     * [Modulo Operation](useful_knowledge/modulo_operation.md)
     * [Fibonacci](useful_knowledge/fibonacci.md)
     * [Bitset Operations](useful_knowledge/bitset_operations.md)
+    * [Newton's Method](useful_knowledge/newtons_method.md)
 * [Problem Solutions](problem_solutions/README.md)
     * Common Problems
         * [Power of Two](problem_solutions/power_of_two.md)
