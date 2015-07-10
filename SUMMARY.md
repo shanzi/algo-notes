@@ -22,6 +22,7 @@
         * [Cut Tiles](problem_solutions/cut_tiles.md)
         * [Implement Trie](problem_solutions/implement_trie.md)
         * [Union Find](problem_solutions/union_find.md)
+        * [Implement Valid Binary Search](problem_solutions/implement_strstr.md)
     * LeetCode
         * [Invert Binary Tree](problem_solutions/invert_binary_tree.md)
         * [Rectangle Area](problem_solutions/rectangle_area.md)
@@ -78,5 +79,8 @@
         * [Gas Station](problem_solutions/gas_station.md)
         * [Word Ladder](problem_solutions/word_ladder.md)
         * [Best Time to Buy and Sell Stock](problem_solutions/best_time_to_buy_and_sell_stock.md)
+        * [Decode Ways](problem_solutions/decode_ways.md)
+        * [Unique Binary Search Trees](problem_solutions/unique_binary_search_trees.md)
+        * [Restore IP Addresses](problem_solutions/restore_ip_addresses.md)
 * [Other Things](other_things/README.md)
     * [English Words](other_things/english_words.md)
