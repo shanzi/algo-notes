@@ -76,5 +76,6 @@
         * [Number of Digit One(Two)](problem_solutions/number_of_digit_one.md)
         * [Gas Station](problem_solutions/gas_station.md)
         * [Word Ladder](problem_solutions/word_ladder.md)
+        * [Best Time to Buy and Sell Stock](problem_solutions/best_time_to_buy_and_sell_stock.md)
 * [Other Things](other_things/README.md)
     * [English Words](other_things/english_words.md)
