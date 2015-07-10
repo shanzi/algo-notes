@@ -44,3 +44,5 @@ transform ration power into calucation of two integer power and one $$n$$th root
 Newton's method is converging quite fast. It has square convergence which means after each itertion
 the number of effective digitals can be doubled. So we can generally regard our $$n$$th root program
 to be a $$O(\log N)$$ algorithm. However, there are cases in which this method may not converge at all.
+
+For more detailed discussion of this algorithm, refer to [Wikipedia](https://en.wikipedia.org/wiki/Newton%27s_method).
