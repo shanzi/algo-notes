@@ -40,3 +40,7 @@ A^{\frac{p}{q}} = A^a\cdot A^{\frac{b}{q}} = A^a\cdot \left(A^{\frac{1}{q}}\righ
 
 Where $$a = \left\lfloor \frac{p}{q}\right\rfloor$$ and $$b$$ is the remainder of $$\frac{p}{q}$$. Hence we can
 transform ration power into calucation of two integer power and one $$n$$th root.
+
+Newton's method is converging quite fast. It has square convergence which means after each itertion
+the number of effective digitals can be doubled. So we can generally regard our $$n$$th root program
+to be a $$O(\log N)$$ algorithm. However, there are cases in which this method may not converge at all.
