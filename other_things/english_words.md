@@ -31,3 +31,16 @@ only remember the spelling but also the pronounciation.
 
 1. On the contrary
 2. Conversely
+
+
+## Order of Growth
+
+1. Constant
+2. Logarithmic
+3. Linear
+4. Linearithmic [/lɪniəɹɪðmɪk/](https://en.wiktionary.org/wiki/linearithmic) ($$O(N\log N)$$)
+5. Quadratic
+6. Cubic
+7. Exponential
+
+More on [Wikipedia](https://en.wikipedia.org/wiki/Time_complexity).
