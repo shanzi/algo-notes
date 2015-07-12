@@ -26,6 +26,8 @@ only remember the spelling but also the pronounciation.
 2. Respective/Respectively
 3. Adjoined/adjoining
 4. Divisible
+5. Proportional
+6. Inversely proportional
 
 ## Phrase
 
