@@ -17,7 +17,7 @@ only remember the spelling but also the pronounciation.
 10. Denominator
 11. Queue /kju:/
 12. Operand
-
+13. Manipulation /məˌnipyəˈlāSHən/
 
 
 ## Adjective/Adverb

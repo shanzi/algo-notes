@@ -82,5 +82,8 @@
         * [Decode Ways](problem_solutions/decode_ways.md)
         * [Unique Binary Search Trees](problem_solutions/unique_binary_search_trees.md)
         * [Restore IP Addresses](problem_solutions/restore_ip_addresses.md)
+        * [Sqrt(x)](problem_solutions/sqrt_x.md)
+        * [Search a 2D Matrix](problem_solutions/search_a_2d_matrix.md)
+        * [Set A Matrix Zeros](problem_solutions/set_a_matrix_zeros.md)
 * [Other Things](other_things/README.md)
     * [English Words](other_things/english_words.md)
