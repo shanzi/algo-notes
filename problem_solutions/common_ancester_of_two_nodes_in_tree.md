@@ -193,3 +193,43 @@ and does not easily to be wrong.
 2. if `TreeNode` is given and no parent pointer allowed, remember to mention this solution apart
 from the recursive one. What's more, gives the shortcomings of the recursive solutions and
 in what way this algorithm is better.
+
+# Common ancester of two nodes in binary search tree
+
+As for binary search tree. Things is a little simpler. As in the in-order traversal, the elements is increasing,
+So we can easily verify if a node is the common ancestor of those to nodes. If it is not, we use its value
+to decide to go to left child or right child.
+
+```java
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class CommonAncesterOfTwoNodes {
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        int a = Math.min(p.val, q.val);
+        int b = Math.max(p.val, q.val);
+        
+        TreeNode h = root;
+        while (h != null) {
+            if (h.val >= a && h.val <= b) break;
+            else if (h.left != null && h.right !=null) {
+                if (h.val > b) h = h.left;
+                else if (h.val < a) h = h.right; 
+            } else if (h.left != null) {
+                h = h.left;
+            } else if (h.right != null) {
+                h = h.right;
+            } else {
+                break;
+            }
+        }
+        return h;
+    }
+}
+```
