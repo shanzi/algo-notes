@@ -18,6 +18,8 @@ only remember the spelling but also the pronounciation.
 11. Queue /kju:/
 12. Operand
 13. Manipulation /məˌnipyəˈlāSHən/
+14. Permutation
+15. Factorial
 
 
 ## Adjective/Adverb
@@ -28,6 +30,8 @@ only remember the spelling but also the pronounciation.
 4. Divisible
 5. Proportional
 6. Inversely proportional
+7. Clockwise/counterclockwise
+8. Ascending/descending
 
 ## Phrase
 
