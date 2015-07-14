@@ -21,6 +21,7 @@ only remember the spelling but also the pronounciation.
 14. Permutation
 15. Factorial
 16. Parenthesis
+17. Contradiction
 
 
 ## Adjective/Adverb

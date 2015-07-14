@@ -90,5 +90,7 @@
         * [Power(x, n)](problem_solutions/pow_x_n.md)
         * [Rotate Image](problem_solutions/rotate_image.md)
         * [Permutations](problem_solutions/permutations.md)
+        * [N-Sum](problem_solutions/n_sum.md)
+        * [Container with Most Water](problem_solutions/container_with_most_water.md)
 * [Other Things](other_things/README.md)
     * [English Words](other_things/english_words.md)
