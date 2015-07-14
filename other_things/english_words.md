@@ -20,6 +20,7 @@ only remember the spelling but also the pronounciation.
 13. Manipulation /məˌnipyəˈlāSHən/
 14. Permutation
 15. Factorial
+16. Parenthesis
 
 
 ## Adjective/Adverb

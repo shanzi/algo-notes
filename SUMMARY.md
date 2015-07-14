@@ -87,7 +87,7 @@
         * [Search a 2D Matrix](problem_solutions/search_a_2d_matrix.md)
         * [Set A Matrix Zeros](problem_solutions/set_a_matrix_zeros.md)
         * [Spiral Matrix](problem_solutions/spiral_matrix.md)
-        * [Power(x, n)](problem_solutions/power_x_n.md)
+        * [Power(x, n)](problem_solutions/pow_x_n.md)
         * [Rotate Image](problem_solutions/rotate_image.md)
         * [Permutations](problem_solutions/permutations.md)
 * [Other Things](other_things/README.md)
