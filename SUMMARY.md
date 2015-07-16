@@ -92,5 +92,6 @@
         * [Permutations](problem_solutions/permutations.md)
         * [N-Sum](problem_solutions/n_sum.md)
         * [Container with Most Water](problem_solutions/container_with_most_water.md)
+        * [The Skyline Problem](problem_solutions/the_skyline_problem.md)
 * [Other Things](other_things/README.md)
     * [English Words](other_things/english_words.md)
