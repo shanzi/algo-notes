@@ -98,5 +98,7 @@
         * [Maximum Gap](problem_solutions/maximum_gap.md)
         * [LRU Cache](problem_solutions/lru_cache.md)
         * [Max Points on a Line](problem_solutions/max_points_on_a_line.md)
+        * [Slinding Window Maximum](problem_solutions/sliding_window_maximum.md)
+        * [Candy](problem_solutions/candy.md)
 * [Other Things](other_things/README.md)
     * [English Words](other_things/english_words.md)
