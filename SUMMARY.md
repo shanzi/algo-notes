@@ -113,5 +113,7 @@
         * [Insert Interval](problem_solutions/insert_interval.md)
         * [N-Queen](problem_solutions/n_queen.md)
         * [Merge Intervals](problem_solutions/merge_intervals.md)
+        * [Wildcard Matching](problem_solutions/wildcard_matching.md)
+        * [Trapping Rain Water](problem_solutions/trapping_rain_water.md)
 * [Other Things](other_things/README.md)
     * [English Words](other_things/english_words.md)
