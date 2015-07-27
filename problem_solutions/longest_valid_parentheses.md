@@ -7,7 +7,38 @@ so we can regard string after that character as a independent sub problem.
 2. If we can find a match, then the sub sequence from last unmatched `(` to current `)` will be a
 sub sequence contains valid parentheses.
 
-We can use a stack to store the position of left parentheses.
+We can use a stack to store the position of left parentheses:
+
+```java
+public class LongestValidParentheses {
+    public int longestValidParentheses(String s) {
+        Stack<Integer> stack = new Stack<Integer>();
+        
+        int max = 0;
+        int left = -1;
+        
+        for (int i = 0;i < s.length(); i++) {
+            char ch = s.charAt(i);
+            if (ch == '(') stack.push(i);
+            else {
+                if (stack.isEmpty()) {
+                    left = i;
+                } else {
+                    stack.pop();
+                    if (stack.isEmpty()) max = Math.max(max, i - left);
+                    else max = Math.max(max, i - stack.peek());
+                }
+            }
+        }
+        
+
+        return max;
+    }
+}
+```
+
+
+To save space, we can also make use of the array to simulate a stack:
 
 ```java
 public class LongestValidParentheses {

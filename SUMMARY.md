@@ -119,5 +119,6 @@
         * [Sudoku Solver](problem_solutions/sudoku_solver.md)
         * [Search in Rotated Sorted Array](problem_solutions/search_in_rotated_sorted_array.md)
         * [Longest Valid Parentheses](problem_solutions/longest_valid_parentheses.md)
+        * [Different Ways to Add Parentheses](problem_solutions/different_ways_to_add_parentheses.md)
 * [Other Things](other_things/README.md)
     * [English Words](other_things/english_words.md)
