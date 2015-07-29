@@ -81,48 +81,45 @@ but this method is quite a simple and fast solution and it is very space efficie
  * public class ListNode {
  *     int val;
  *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;
- *     }
+ *     ListNode(int x) { val = x; }
  * }
  */
-public class MergeKSortedList {
-    public ListNode mergeKLists(List<ListNode> lists, int start, int end) {
-        if (start == end) return lists.get(start);
+public class Solution {
+    private ListNode mergeKLists(ListNode[] lists, int a, int b) {
+        if (a == b) return lists[a];
         
-        int mid = (start + end) / 2;
-        ListNode leftHead = mergeKLists(lists, start, mid);
-        ListNode rightHead = mergeKLists(lists, mid + 1, end);
+        int mid = (a + b) / 2;
+        ListNode left = mergeKLists(lists, a, mid);
+        ListNode right = mergeKLists(lists, mid + 1, b);
         
         ListNode dummyHead = new ListNode(0);
-        
         ListNode p = dummyHead;
         
-        while (leftHead != null && rightHead != null) {
-            if (leftHead.val <= rightHead.val) {
-                p.next = leftHead;
-                p = p.next;
-                leftHead = leftHead.next;
+        while (left != null && right != null) {
+            if (left.val <= right.val) {
+                p.next = left;
+                left = left.next;
             } else {
-                p.next = rightHead;
-                p = p.next;
-                rightHead = rightHead.next;
+                p.next = right;
+                right = right.next;
             }
+            
+            p = p.next;
         }
         
-        if (leftHead != null) {
-            p.next = leftHead;
+        if (left == null) {
+            p.next = right;
         } else {
-            p.next = rightHead;
+            p.next = left;
         }
         
         return dummyHead.next;
     }
     
-    public ListNode mergeKLists(List<ListNode> lists) {
-        if (lists.isEmpty()) return null;
-        else return mergeKLists(lists, 0, lists.size() - 1);
+    public ListNode mergeKLists(ListNode[] lists) {
+        if (lists.length == 0) return null;
+        
+        return mergeKLists(lists, 0, lists.length - 1);
     }
 }
 ```
