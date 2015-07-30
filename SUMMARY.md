@@ -122,5 +122,7 @@
         * [Different Ways to Add Parentheses](problem_solutions/different_ways_to_add_parentheses.md)
         * [Substring with Concatenation of All Words](problem_solutions/substring_with_concatenation_of_all_words.md)
         * [Reverse Nodes in K-Group](problem_solutions/reverse_nodes_in_k_group.md)
+        * [Median of Two Sorted Arrays](problem_solutions/median_of_two_sorted_arrays.md)
+        * [Regular Expression Matching](problem_solutions/regular_expression_matching.md)
 * [Other Things](other_things/README.md)
     * [English Words](other_things/english_words.md)
