@@ -6,7 +6,7 @@ The iteration formular is:
 
 1. If `p[j - 1]` match `s[i - 1]` and `dp[i - 1][j - 1]` are true, then `dp[i][j]` are true
 2. If `p[j - 1] == '*'` and `p[j - 2]` match `s[i - 1]`, `dp[i][j]` will be true when
-either `dp[i - 1][j]` or `dp[i - 1][j - 1]` is true.
+`dp[i - 1][j]` is true.
 3. If `p[j - 1] == '*'` and `p[0..j - 3]` has already been matching with `s[0..i - 1]` then
 we can get `dp[i][j]` is true as the character before `*` can appears zero time.
 
@@ -43,10 +43,10 @@ public class Solution {
                 }
                 
                 if (p.charAt(j - 1) == '*') {
-                    cur[j] |= (cur[j - 1] || cur[j - 2]);
+                    cur[j] |= cur[j - 2];
                     
                     if (j >= 2 && (p.charAt(j - 2) == s.charAt(i - 1) || p.charAt(j - 2) == '.')) {
-                        cur[j] |= last[j - 1] || last[j];
+                        cur[j] |= last[j];
                     }
                 }
             }
