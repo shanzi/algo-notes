@@ -49,7 +49,7 @@ public class Crane {
         init(L);
         for (int i = 0; i < opn.length; i++) {
             int s = opn[i];
-            operate(s, opdeg[i] - cur[s], 0, 0, L.length - 1);
+            operate(s, opdeg[i] - cur[s], 0, 0,  l - 1);
             cur[s] = opdeg[i];
 
             System.out.printf("%.2f %.2f\n", vx[0], vy[0]);
