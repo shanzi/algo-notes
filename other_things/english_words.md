@@ -23,6 +23,7 @@ only remember the spelling but also the pronounciation.
 16. Parenthesis
 17. Contradiction
 18. Overlap
+19. Minimum Spanning Tree
 
 
 ## Adjective/Adverb
