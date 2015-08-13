@@ -124,6 +124,7 @@
         * [Reverse Nodes in K-Group](problem_solutions/reverse_nodes_in_k_group.md)
         * [Median of Two Sorted Arrays](problem_solutions/median_of_two_sorted_arrays.md)
         * [Regular Expression Matching](problem_solutions/regular_expression_matching.md)
+        * [Longest Palindromic Substring](problem_solutions/longest_palindromic_substring.md)
     * POJ
         * [MooFest](problem_solutions/moo_fest.md)
         * [InnerVertices](problem_solutions/inner_vertices.md)
