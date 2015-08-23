@@ -22,11 +22,19 @@ class Edge implements Comparable<Edge> {
 }
 
 public class GCampus {
+    private static void restorePath(long[] dist, int s, List<List<Edge>> graph, Set<Integer> res) {
+        List<Edge> edges = graph.get(s);
+        for (Edge e : edges) {
+            if (dist[s] + e.cost == dist[e.v]) {
+                res.add(e.id);
+                restorePath(dist, e.v, graph, res);
+            }
+        }
+    }
     private static HashSet<Integer> dijkstra(int N, int s, List<List<Edge>> graph) {
         long[] dist = new long[N];
         Arrays.fill(dist, Integer.MAX_VALUE);
         dist[s] = 0;
-        Edge[] prev = new Edge[N];
     
         PriorityQueue<Edge> que = new PriorityQueue<Edge>();
         que.offer(new Edge(s, s, 0, -1));
@@ -38,20 +46,13 @@ public class GCampus {
             for (Edge e : graph.get(p.u)) {
                 if (dist[e.v] > (p.cost + e.cost)) {
                     dist[e.v] = p.cost + e.cost;
-                    prev[e.v] = e;
                     que.offer(new Edge(e.v, s, dist[e.v], -1));
                 }
             }
         }
-        HashSet<Integer> set = new HashSet<Integer>(N);
-        for (int i = 0; i < N; i++) {
-            if (i == s) continue;
-            Edge pv = prev[i];
-            while (pv != null) {
-                set.add(pv.id);
-                pv = prev[pv.u];
-            }
-        }
+
+        HashSet<Integer> set = new HashSet<Integer>();
+        restorePath(dist, s, graph, set);
         return set;
     }
     public static void main(String[] args) {
@@ -59,28 +60,22 @@ public class GCampus {
         int T = in.nextInt();
         for (int t = 0; t < T; t++) {
             int N = in.nextInt(), M = in.nextInt();
-            int[][] cost = new int[N][N];
             ArrayList<List<Edge>> edges = new ArrayList<List<Edge>>(N);
+            HashSet<Integer> set = new HashSet<Integer>();
             for (int m = 0; m < M; m++) {
                 edges.add(new ArrayList<Edge>(N));
             }
-            boolean[] edgesfree = new boolean[M];
             for (int m = 0; m < M; m++) {
                 int a = in.nextInt(), b = in.nextInt(), c = in.nextInt();
-                if (cost[Math.min(a, b)][Math.max(a, b)] == c) continue;
-                cost[Math.min(a, b)][Math.max(a, b)] = c;
                 edges.get(a).add(new Edge(a, b, c, m));
                 edges.get(b).add(new Edge(b, a, c, m));
-                edgesfree[m] = true;
             }
             for (int i = 0; i < N; i++) {
-                for (int id : dijkstra(N, i, edges)) {
-                    edgesfree[id] = false;
-                }
+               set.addAll( dijkstra(N, i, edges));
             }
             System.out.printf("Case #%d:\n", t + 1);
             for (int i = 0; i < M; i++) {
-                if (edgesfree[i]) System.out.println(i);
+                if (!set.contains(i)) System.out.println(i);
             }
         }
     }
