@@ -144,5 +144,11 @@
         * [Moo University](problem_solutions/moo_university.md)
         * [Wireless Network](problem_solutions/wireless_network.md)
         * [Find them, Catch them](problem_solutions/find_them_catch_them.md)
+    * APAC Test
+        * 2016
+            * [Googol String](problem_solutions/googol_string.md)
+            * [gCube](problem_solutions/gcube.md)
+            * [gCampus](problem_solutions/gcampus.md)
+            * [gSnake](problem_solutions/gsnake.md)
 * [Other Things](other_things/README.md)
     * [English Words](other_things/english_words.md)
