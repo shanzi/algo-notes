@@ -144,6 +144,12 @@
         * [Moo University](problem_solutions/moo_university.md)
         * [Wireless Network](problem_solutions/wireless_network.md)
         * [Find them, Catch them](problem_solutions/find_them_catch_them.md)
+        * [River Hopscotch](problem_solutions/river_hopscotch.md)
+        * [Monthly Expense](problem_solutions/monthly_expense.md)
+        * [Drying](problem_solutions/drying.md)
+        * [Cow Acrobats](problem_solutions/cow_acrobats.md)
+        * [Dropping Tests](problem_solutions/dropping_test.md)
+        * [KBest](problem_solutions/k_best.md)
     * APAC Test
         * 2016
             * [Googol String](problem_solutions/googol_string.md)
