@@ -158,6 +158,8 @@
         * [Prime Path](problem_solutions/prime_path.md)
         * [X-Factor Chains](problem_solutions/xfactor_chains.md)
         * [Semi-prime H-numbers](problem_solutions/semiprime_h_numbers.md)
+        * [Pseudoprime Numbers](problem_solutions/pseudoprime_numbers.md)
+        * [Raising Modulo Numbers](problem_solutions/raising_modulo_numbers.md)
     * APAC Test
         * 2016
             * [Googol String](problem_solutions/googol_string.md)
