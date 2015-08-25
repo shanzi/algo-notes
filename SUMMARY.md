@@ -160,6 +160,12 @@
         * [Semi-prime H-numbers](problem_solutions/semiprime_h_numbers.md)
         * [Pseudoprime Numbers](problem_solutions/pseudoprime_numbers.md)
         * [Raising Modulo Numbers](problem_solutions/raising_modulo_numbers.md)
+        * [Six Degree of Cowvin Bacon](problem_solutions/six_degrees_of_cowvin_bacon.md)
+        * [Wormhols](problem_solutions/wormholes.md)
+        * [Silver Cow Party](problem_solutions/silver_cow_party.md)
+        * [AgriNet](problem_solutions/agri_net.md)
+        * [Bad Cowtractors](problem_solutions/bad_cowtractors.md)
+        * [Out of Hay](problem_solutions/out_of_hay.md)
     * APAC Test
         * 2016
             * [Googol String](problem_solutions/googol_string.md)
