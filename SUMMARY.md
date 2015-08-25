@@ -150,6 +150,14 @@
         * [Cow Acrobats](problem_solutions/cow_acrobats.md)
         * [Dropping Tests](problem_solutions/dropping_test.md)
         * [KBest](problem_solutions/k_best.md)
+        * [Mth Matrix](problem_solutions/mth_matrix.md)
+        * [Telephone Lines](problem_solutions/telephone_lines.md)
+        * [Garland](problem_solutions/garland.md)
+        * [GCD & LCM Inverse](problem_solutions/gcd_and_lcm_inverse.md)
+        * [Dead Fraction](problem_solutions/dead_fraction.md)
+        * [Prime Path](problem_solutions/prime_path.md)
+        * [X-Factor Chains](problem_solutions/xfactor_chains.md)
+        * [Semi-prime H-numbers](problem_solutions/semiprime_h_numbers.md)
     * APAC Test
         * 2016
             * [Googol String](problem_solutions/googol_string.md)
