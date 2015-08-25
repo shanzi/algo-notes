@@ -1,4 +1,4 @@
-# River Hopscotch
+# River Hopscotch (POJ 3258)
 
 An integrated application of greedy strategy and binary search. The question asks you to remove
 `M` rocks in the river and let the minimum distance between every two adjoint rocks as large as possible.

@@ -1,4 +1,4 @@
-# Monthly Expense
+# Monthly Expense (POJ 3273)
 
 We use binary search to guess a monthly expense value and verify if it is feasible with gready strategy.
 As every expense in each day must be arranged to one of the months, we can start from the first day and

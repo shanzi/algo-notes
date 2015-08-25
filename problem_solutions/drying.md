@@ -1,4 +1,4 @@
-# Drying
+# Drying (POJ 3104)
 
 Using binary search method to guess a drying value first and then we can use greedy strategy to verify
 if the guessed value is feasible. If the `i`th cloth contains `A[i]` amount of water and the guest value

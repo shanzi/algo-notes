@@ -1,4 +1,4 @@
-# Dropping Tests
+# Dropping Tests (POJ 2976)
 
 This is a typical problem to maximize the average value. There is a general solution to this kind
 of problems.

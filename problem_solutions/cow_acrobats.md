@@ -1,4 +1,4 @@
-# Cow Acrobats
+# Cow Acrobats (POJ 3045)
 
 Give a series of cows with their weight and strength and let them stand as a stack. The risk
 if a cow in the stack equals the total weight of cows stand on top if it. You are asked to minimize
