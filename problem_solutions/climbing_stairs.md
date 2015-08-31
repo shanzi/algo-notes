@@ -12,7 +12,7 @@ this problem as a Dynamic Programing problem, we have
 DP[i] = DP[i - 1] + DP[i - 2]
 {% endmath %}
 
-We have $$DP[0] = DP[1] = 1$$, so it will be a Fibonacci sequence generated for $$DP[i}$$.
+We have $$DP[0] = DP[1] = 1$$, so it will be a Fibonacci sequence generated for $$DP[i]$$.
 
 ```java
 public class ClimbingStairs {
