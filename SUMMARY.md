@@ -174,6 +174,11 @@
         * [Allowance](problem_solutions/allowance.md)
         * [Stripies](problem_solutions/stripies.md)
         * [Protecting the Flowers](problem_solutions/protecting_the_flowers.md)
+        * [Cow Bowling](problem_solutions/cow_bowling.md)
+        * [Sumsets](problem_solutions/sumsets.md)
+        * [Apple Catching](problem_solutions/apple_catching.md)
+        * [Milking Time](problem_solutions/milking_time.md)
+        * [Cheapest Palindrome](problem_solutions/cheapest_palindrome.md)
     * APAC Test
         * 2016
             * [Googol String](problem_solutions/googol_string.md)
