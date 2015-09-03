@@ -166,6 +166,14 @@
         * [AgriNet](problem_solutions/agri_net.md)
         * [Bad Cowtractors](problem_solutions/bad_cowtractors.md)
         * [Out of Hay](problem_solutions/out_of_hay.md)
+        * [Best Cow Line](problem_solutions/best_cow_line.md)
+        * [Radar Installation](problem_solutions/radar_installation.md)
+        * [Stall Reservation](problem_solutions/stall_reservation.md)
+        * [Yogurt Factory](problem_solutions/yogurt_factory.md)
+        * [Packets](problem_solutions/packets.md)
+        * [Allowance](problem_solutions/allowance.md)
+        * [Stripies](problem_solutions/stripies.md)
+        * [Protecting the Flowers](problem_solutions/protecting_the_flowers.md)
     * APAC Test
         * 2016
             * [Googol String](problem_solutions/googol_string.md)
