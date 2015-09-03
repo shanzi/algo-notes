@@ -179,6 +179,9 @@
         * [Apple Catching](problem_solutions/apple_catching.md)
         * [Milking Time](problem_solutions/milking_time.md)
         * [Cheapest Palindrome](problem_solutions/cheapest_palindrome.md)
+        * [Coins](problem_solutions/coins.md)
+        * [Ant Counting](problem_solutions/ant_counting.md)
+        * [Dollar Dayz](problem_solutions/dollar_daz.md)
     * APAC Test
         * 2016
             * [Googol String](problem_solutions/googol_string.md)
