@@ -187,6 +187,12 @@
         * [Making the Grade](problem_solutions/making_the_grade.md)
         * [Space Elevator](problem_solutions/space_elevator.md)
         * [Cow Exhibition](problem_solutions/cow_exhibition.md)
+        * [Red and Black](problem_solutions/red_and_black.md)
+        * [Curling 2.0](problem_solutions/curling2.md)
+        * [Meteor Shower](problem_solutions/meteor_shower.md)
+        * [Smallest Difference](problem_solutions/smallest_difference.md)
+        * [Backward Digit Sums](problem_solutions/backward_digit_sums.md)
+        * [Hopscotch](problem_solutions/hopscotch.md)
     * APAC Test
         * 2016
             * [Googol String](problem_solutions/googol_string.md)
