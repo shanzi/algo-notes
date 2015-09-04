@@ -193,6 +193,10 @@
         * [Smallest Difference](problem_solutions/smallest_difference.md)
         * [Backward Digit Sums](problem_solutions/backward_digit_sums.md)
         * [Hopscotch](problem_solutions/hopscotch.md)
+        * [The Water Bowls](problem_solutions/the_water_bowls.md)
+        * [Extended Lights Out](problem_solutions/extended_lights_out.md)
+        * [Subset](problem_solutions/subset.md)
+        * [Sumset](problem_solutions/sumset.md)
     * APAC Test
         * 2016
             * [Googol String](problem_solutions/googol_string.md)
