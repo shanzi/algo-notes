@@ -182,6 +182,11 @@
         * [Coins](problem_solutions/coins.md)
         * [Ant Counting](problem_solutions/ant_counting.md)
         * [Dollar Dayz](problem_solutions/dollar_daz.md)
+        * [Wooden Sticks](problem_solutions/wooden_sticks.md)
+        * [Bridging Signals](problem_solutions/bridging_signals.md)
+        * [Making the Grade](problem_solutions/making_the_grade.md)
+        * [Space Elevator](problem_solutions/space_elevator.md)
+        * [Cow Exhibition](problem_solutions/cow_exhibition.md)
     * APAC Test
         * 2016
             * [Googol String](problem_solutions/googol_string.md)
