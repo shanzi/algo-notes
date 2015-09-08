@@ -19,7 +19,6 @@
         * [Max XOR sub sequence](problem_solutions/max_xor_sub_sequence.md)
         * [History Query on Stack](problem_solutions/history_query_on_stack.md)
         * [Partition Problem](problem_solutions/partition_problem.md)
-        * [Cut Tiles](problem_solutions/cut_tiles.md)
         * [Implement Trie](problem_solutions/implement_trie.md)
         * [Union Find](problem_solutions/union_find.md)
         * [Implement Valid Binary Search](problem_solutions/implement_valid_binary_search.md)
@@ -203,5 +202,10 @@
             * [gCube](problem_solutions/gcube.md)
             * [gCampus](problem_solutions/gcampus.md)
             * [gSnake](problem_solutions/gsnake.md)
+        * 2015
+            * [Seven Segement Display](problem_solutions/seven_segment_display.md)
+            * [Super 2048](problem_solutions/super2048.md)
+            * [Addition](problem_solutions/addition.md)
+            * [Cut Tiles](problem_solutions/cut_tiles.md)
 * [Other Things](other_things/README.md)
     * [English Words](other_things/english_words.md)
