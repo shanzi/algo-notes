@@ -197,15 +197,20 @@
         * [Subset](problem_solutions/subset.md)
         * [Sumset](problem_solutions/sumset.md)
     * APAC Test
-        * 2016
+        * 2016 Round A
             * [Googol String](problem_solutions/googol_string.md)
             * [gCube](problem_solutions/gcube.md)
             * [gCampus](problem_solutions/gcampus.md)
             * [gSnake](problem_solutions/gsnake.md)
-        * 2015
+        * 2015 Round A
             * [Seven Segement Display](problem_solutions/seven_segment_display.md)
             * [Super 2048](problem_solutions/super2048.md)
             * [Addition](problem_solutions/addition.md)
             * [Cut Tiles](problem_solutions/cut_tiles.md)
+        * 2015 Round B
+            * [Password Attacker](problem_solutions/password_attacker.md)
+            * [Card Game](problem_solutions/card_game.md)
+            * [New Years Eye](problem_solutions/new_years_eye.md)
+            * [Parentheses Order](problem_solutions/parentheses_order.md)
 * [Other Things](other_things/README.md)
     * [English Words](other_things/english_words.md)
