@@ -212,5 +212,10 @@
             * [Card Game](problem_solutions/card_game.md)
             * [New Years Eye](problem_solutions/new_years_eye.md)
             * [Parentheses Order](problem_solutions/parentheses_order.md)
+        * 2015 Round C
+            * [Mine Sweeper](problem_solutions/mine_sweeper.md)
+            * [Taking Metro](problem_solutions/taking_metro.md)
+            * [Broken Calculator](problem_solutions/broken_calculator.md)
+            * [Teris](problem_solutions/teris.md)
 * [Other Things](other_things/README.md)
     * [English Words](other_things/english_words.md)
