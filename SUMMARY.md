@@ -217,5 +217,10 @@
             * [Taking Metro](problem_solutions/taking_metro.md)
             * [Broken Calculator](problem_solutions/broken_calculator.md)
             * [Teris](problem_solutions/teris.md)
+        * 2015 Round D
+            * [CubeIV](problem_solutions/cube_iv.md)
+            * [GBus Count](problem_solutions/gbus_count.md)
+            * [Sort a Scrambled Itinerary](problem_solutions/sort_a_scrambled_itinerary.md)
+            * [Itz Chess](problem_solutions/itz_chess.md)
 * [Other Things](other_things/README.md)
     * [English Words](other_things/english_words.md)
