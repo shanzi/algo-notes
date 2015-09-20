@@ -22,6 +22,6 @@ $$
 (x / y) % p = (x\cdot y^{p - 2}) % p
 $$
 
-We calucate $$y^{p - 2]$$ in ahead of time and get it directly when we calculate $$C_j^k$$.
+We calucate $$y^{p - 2}$$ in ahead of time and get it directly when we calculate $$C_j^k$$.
 
 !CODEFILE "../apac/2015/RoundB/PasswordAttacker.java"
