@@ -2,40 +2,39 @@ import java.io.*;
 import java.util.*;
 
 public class gNumbers {
-    private static int[] primes;
-    private static int[] getPrimes(int N) {
-        if (N < 2) return new int[0];
-        boolean[] isprime = new boolean[N];
-        Arrays.fill(isprime, true);
-        int count = 1;
-        for (int i = 3; i < N; i += 2) {
-            if (!isprime[i]) continue;
-            for (int j = i; i * (long)j < N; j += 2) isprime[i * j] = false;
-            count++;
+    static private ArrayList<Long> factors = new ArrayList<Long>(1<<20);
+    private static void getFactors(long N) {
+        factors.clear();
+        for (long i = 2; i * i <= N; i++) {
+            if (N % i == 0) {
+                factors.add(i);
+                while (N % i == 0) N /= i;
+            }
         }
-        int[] res = new int[count];
-        int idx = 0;
-        res[idx++] = 2;
-        for (int i = 3; i < N; i += 2) if (isprime[i]) res[idx++] = i;
-        return res;
+        if (N > 1) factors.add(N);
     }
-    private static int getGNumber(long N) {
+    private static boolean isPrime(long N) {
+        for(long i = 2; i * i <= N; i++) {
+            if ((N % i) == 0) return false;
+        }
+        return true;
+    }
+    private static boolean isGNumber(long N) {
         long res = 0;
         while (N > 0) {
             res += (N % 10);
             N /= 10;
         }
-        return (int)res;
+        return (res == 1 || isPrime(res));
     }
     private static boolean solve(long N, boolean player) {
-        int gnum = getGNumber(N);
-        if (gnum == 1 || Arrays.binarySearch(primes, gnum) >= 0) {
+        if (isGNumber(N)) {
             return !player;
         }
-        for (int i = primes.length - 1; i >= 0; i--) {
-            if (N % primes[i] == 0) {
+        for (long factor : factors) {
+            if (N % factor == 0) {
                 long C = N;
-                while (C % primes[i] == 0) C /= primes[i];
+                while (C % factor == 0) C /= factor;
                 if (solve(C, !player) == player) return player;
             }
         }
@@ -44,9 +43,9 @@ public class gNumbers {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int T = in.nextInt();
-        primes = getPrimes(100000000);
         for (int t = 0; t < T; t++) {
             long N = in.nextLong();
+            getFactors(N);
             System.out.printf("Case #%d: %s\n", t + 1, solve(N, false) ? "Seymour" : "Laurence");
         }
     }
