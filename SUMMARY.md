@@ -202,6 +202,11 @@
             * [gCube](problem_solutions/gcube.md)
             * [gCampus](problem_solutions/gcampus.md)
             * [gSnake](problem_solutions/gsnake.md)
+        * 2016 Round B
+            * [Travel](problem_solutions/travel.md)
+            * [gWheels](problem_solutions/gwheels.md)
+            * [gNumbers](problem_solutions/gnumbers.md)
+            * [Albocede DNA](problem_solutions/albocede_dna.md)
         * 2015 Round A
             * [Seven Segement Display](problem_solutions/seven_segment_display.md)
             * [Super 2048](problem_solutions/super2048.md)
