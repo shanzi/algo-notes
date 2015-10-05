@@ -167,3 +167,121 @@ As to compare left leaning red black tree to preliminary binary search tree, we 
 runs successfully in about `5.76` seconds. After reduce the key range from 1000000 to 10000, the preliminary
 implementation ran for about `1.24` seconds while red black tree finished in `0.12` seconds. The time cost
 is reduced quite a lot.
+
+## Delete a key
+
+Delete a key is a little complex even in preliminary binary search tree. We can first think about
+the way to delete the node with minimum or maximum key of subtree. We also use recursive way here.
+To find the lowest key, we follow on pointers to left child until we meet a node whose left node
+is `null`, then we remove that node. Following code shows how to do it:
+
+```java
+private Node deleteMin(Node x) {
+    if (x.left == null) return x.right;
+    x.left = deleteMin(x.left);
+    return x;
+}
+```
+
+The implementation of `deleteMax` is similar. Now we make use of this method to enables removing
+a node whose both two children are not null. The idea is simple. We replace the node with the node
+with minimum key in its right subtree and then use `deleteMin` to delete that min node.(Or we replace
+it with the node with maximum key in its left subtree)
+
+To achieve this, we may need another function to get the node with minimum key first. Here we use
+loop instead of recursion to do this.
+
+```java
+private Node min(Node x) {
+    while (x.left != null) {
+        x = x.left;
+    }
+    return x;
+}
+```
+
+Then, along with deletion method of nodes which either left or right node is null, we can provide the
+delete function:
+
+```java
+private Node delete(Node x, Integer key) {
+    if (x == null) return null;
+    if (key < x.key) delete(x.left, key);
+    else if (key > x.key) delete(x.right, key);
+    else {
+        if (x.left == null) return x.right;
+        else if (x.right == null) return x.left;
+
+        Node t = x;
+        x = min(t.right);
+        x.right = deleteMin(t.right);
+        x.left = t.left;
+    }
+    return x;
+}
+```
+
+The deletion in red-black tree is in similar idea but is more complex as we need to keep the balance
+of tree and subtrees while recursively deletion. For the details of this aspect please refer to
+the book *Algorithm*.
+
+## Select and Rank
+
+In any binary search tree, if we keep the size of subtree in each node, we will be going to perform
+select and rank operation fast. The select operation returns the kth least key in the tree and
+rank operation returns a key's rank in the tree.
+
+The implememtation is like:
+
+```java
+private int size(Node x) {
+    if (x == null) return 0;
+    else return x.size;
+}
+public Integer select(int k) {
+    Node x = select(root, k);
+    if (x != null) return x.key;
+    else return x;
+}
+private Node select(Node x, int k) {
+    // k starts from zero
+    if (x == null) return null;
+    int t = size(x.left);
+    if (t > k) return select(x.left, k);
+    else (t < k) return select(x.right, k - t - 1);
+    else return x;
+}
+```
+
+and,
+
+```java
+public int rank(int key) {
+    return rank(root, key);
+}
+private int rank(Node x, int key) {
+    if (x == null) return 0;
+    if (key < x.key) return rank(x.left, key);
+    else if (key > x.key) return size(x.left) + 1 + rank(x.right, key);
+    else return size(x.left);
+}
+```
+
+## Range query
+
+We can also perform range query on the tree. For example, if we'd like to return keys between `lo` and `hi` inclusive,
+we can use the following code:
+
+```java
+public Iterable<integer> keys(Integer lo, Integer hi) {
+    Queue<Integer> queue = new Queue<Integer>();
+    keys(root, queue, lo, hi);
+    return queue;
+}
+private void keys(Node x, Queue<Integer> queue, Integer lo, Integer hi) {
+    if (x == null) return;
+    if (x.key > lo) keys(x.left, queue, lo, hi);
+    if (x.key >= lo && x.key <= hi) queue.enqueue(x.key);
+    if (x.key < hi) keys(x.right, queue, lo, hi);
+}
+```
