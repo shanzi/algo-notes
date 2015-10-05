@@ -7,6 +7,7 @@
     * [Fibonacci](useful_knowledge/fibonacci.md)
     * [Bitset Operations](useful_knowledge/bitset_operations.md)
     * [Newton's Method](useful_knowledge/newtons_method.md)
+    * [Balanced Binary Search Trees](useful_knowledge/balanced_binary_search_trees.md)
 * [Problem Solutions](problem_solutions/README.md)
     * Common Problems
         * [Power of Two](problem_solutions/power_of_two.md)
