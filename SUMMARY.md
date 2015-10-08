@@ -24,6 +24,7 @@
         * [Union Find](problem_solutions/union_find.md)
         * [Implement Valid Binary Search](problem_solutions/implement_valid_binary_search.md)
         * [Most Divisors](problem_solutions/most_divisors.md)
+        * [Integer Grid Reachable Problems](problem_solutions/integer_grid_reachable_problems.md)
     * LeetCode
         * [Invert Binary Tree](problem_solutions/invert_binary_tree.md)
         * [Rectangle Area](problem_solutions/rectangle_area.md)
