@@ -63,4 +63,13 @@ So the solution for this problem is:
 3. If there is one $$(x_t + y_t) / x_d$$ is odd. Then any $$(x_t, y_t)$$ other than the former two cases is reachable.
 4. At last, if $$(x_t + y_t) / x_d$$ is even, we can reach it.
 
+The fourth is because, we can always find a solution so that $$\sum a_ix_i = x_d$$. We use these $$a_i$$ on
+corresponding $$y_i$$ and will get $$\sum a_iy_i = y'$$. Thus we can always get to $$(x_d, y')$$. If $$y' / x_d$$
+is even, obviously we can get to $$(x_d, 0)$$ then and the same to $$(0, x_d)$$ so $$(x_d, x_d)$$ is always reachable.
+If $$y' / x_d$$ is odd, we can get to $$(x_d, x_d)$$ directly.
 
+So, if $$(x_t + y_t) / x_d$$ is even, we can get:
+
+1. Both $$x_t$$ and $$y_t$$ are even. So we can get to $$(x_t, y_t)$$ directly.
+2. Both $$x_t$$ and $$y_t$$ are odd. In this case we can get to $$(x_t - x_d, y_t - x_d)$$ first and make
+a move of $$(x_d, x_d)$$ to get to $$(x_t, y_t)$$.
