@@ -224,7 +224,7 @@ int solve() {
             }
         }
     }
-    return dp[n][j];
+    return dp[n][W];
 }
 ```
 
