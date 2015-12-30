@@ -1,13 +1,14 @@
 # Bitset Operations
 
-If the number of elements is small, let's say less than 32, we can use an `int` value
-to iterate through all the subsets of them. Let's say the whole set has $$n$$ elements.
+We present bitset operations via the following problem: given a set of elements, generate all possible subset combination. 
+
+If the number of elements is small, let's say less than 32, we can use an `int` value to represent a subset combination; to iterate through all the subsets of them. Let's say the whole set has $$n$$ elements.
 We start from $$0$$ which stands for empty set, and each time we add one to the integer,
 we get a new subset where bit $$1$$ in the binary representation stands for the corresponding
 element are in the subset.
 
 Apart from this, there are several other techniques can be used to perform some set operations.
-Let the integer to be $$s$$, here are some common usages:
+Let the integer be $$s$$, here are some common usages:
 
 1. Empty set $$\emptyset$$: `s=0`
 2. Set contains only the $$i$$th element($${i}$$): `1 << i`
@@ -42,7 +43,7 @@ for (int subset = s; subset >=0; subset = s & (subset - 1)) {
 ```
 
 Notes, each iteration of the program will generate a different subset of `s`. This conclusion is drawn from
-the following two observasion:
+the following two observation:
 
 1. The set generated in each iteration must be a subset of `s` as we have performed the intersection
 operation `&`.
