@@ -27,7 +27,7 @@ for (int s = 0; s < (1 << n); s++) {
 }
 ```
 
-A type of questions is to iterate a subset's all subsets. Let's say there is a given subset represented with interger,
+A type of questions is to iterate a subset's all subsets. Let's say there is a given subset represented with integer,
 `s = 0x10101101`, how to get all the subsets of it based on this integer? One solution is we count the number of
 elements in this subset and get all subsets of a set with equal elements count, then we transform the subsets
 of the later to those of the former. This is a solution, but it is not time efficient.
@@ -47,7 +47,7 @@ the following two observation:
 
 1. The set generated in each iteration must be a subset of `s` as we have performed the intersection
 operation `&`.
-2. Each set generated is different. It is because for each subset, only the bits of presensed elements
+2. Each set generated is different. It is because for each subset, only the bits of pre-sensed elements
 in the set are $$1$$, so once you minus $$1$$ from the integer, one of those bits must have changed.
 So even after the intersection operation, some bits left are different. As the process will always
 generate an integer smaller, so all the subsets won't repeat.
@@ -67,14 +67,14 @@ while (comb < (1 << n)) {
 
 The idea of this solution is simple:
 
-1. At first we pick the subsets with the smallest integer represention.
+1. At first we pick the subsets with the smallest integer representation.
 2. Each time we generate the smallest integer with the same number of $$1$$s larger than current one.
 Thus we get the next subset with $$k$$ elements.
 3. Repeat the steps until we it is larger than `1 << n`.
 
 To generate the next integer with the same number of $$1$$s in binary representation needs the following steps:
 
-1. Find the first continous range of $$1$$s from the low bits
+1. Find the first continuous range of $$1$$s from the low bits
 2. Set the first zero beyond those $$1$$s to $$1$$. At this time, the number of $$1$$s increased by one.
 3. Shift the range of $$1$$s in step 1 to lower bits until the number of the $$1$$s decreased by one.
 4. Then we get the smallest integer that is larger than the old one that with the same number of $$1$$.
@@ -85,9 +85,9 @@ line by line in detail.
 At first, we initialize the first set with `int comb = (1 << k) - 1;`. It is easy to understand this will
 be the smallest integer with $$k$$ one in its binary representation.
 
-Then in the loop, the first line we get the start of the first continous range if $$1$$s. That is because,
+Then in the loop, the first line we get the start of the first continuous range if $$1$$s. That is because,
 in generic computer system, negative number can be get by reverse all binary bits and add one. In other words,
-`-comp = (~comp) + 1`. After `~comp` every zero on the right of the first continous range of $$1$$ will all
+`-comp = (~comp) + 1`. After `~comp` every zero on the right of the first continuous range of $$1$$ will all
 be $$1$$s now, after added 1, the first bit of that range will become $$1$$ while the others will be zero.
 As the bits on the left of that range won't be affected and it has been reversed, so after `&` operation,
 they will all become zero.
@@ -96,10 +96,10 @@ Then, what if we add the result `x` with the original `comp`? As in `x`, only th
 range is $$1$$, so after the addition, the first range of ones will become zero and the first zero before
 that range will become $$1$$. We finished half of the second step. 
 
-We need to get the continous range now, that's what `comb & ~y` does. As `y` and `comb` are all the same
+We need to get the continuous range now, that's what `comb & ~y` does. As `y` and `comb` are all the same
 on the left of that range expect the first bit. So after `&` operation with `~y` all bits on the left
 will become zero including the different bit as in `comb` it is zero. Then, from the top bit of that range
-to the right, all bits will keep unchanged. So we get the first continous range of $$1$$ in `comp`.
+to the right, all bits will keep unchanged. So we get the first continuous range of $$1$$ in `comp`.
 
 To shift this range to the right until there are no zero at the lower bits of it, we just need to divide
 the range by `x`. `x` has only the lowest bit of the range is $$1$$ remember it? At last, to decreased the
