@@ -13,16 +13,27 @@ In this chapter, we will mainly talk about operation rules of modulo.
 Operation rules about modulo is necessary knowledge for writing a program that `MOD` the intermediate and final results.
 The following are common operation rules of modulo:
 
-1. Distributive Law:
-    1. $$(a + b) \% p = (a \% p + b \% p) \% p$$
-    1. $$(a - b) \% p = (a \% p - b \% p) \% p$$
-    1. $$(a \times b) \% p = (a \% p \times b \% p)\% p$$
-    1. $$(a \hat{} b) \% p = (a \% p \hat{} b \% p)\% p$$
-2. Associative Law:
-    1. $$[(a + b) \% p + c] \% p = [a + (b + c) \% p] \% p$$
-    1. $$[(a \times b) \% p \times c] \% p = [a \times (b \times c) \% p] \% p$$
-3. Distributive Law(with multiplication):
-    1. $$[(a + b) \% p \times c] \% p = [(a \times c)\%p + (b \times c) \% p] \% p$$
+1. Distributive laws: 
+
+    $$\begin{align*}
+    (a + b) \bmod p &= (a \bmod p + b \bmod p) & \bmod p \\
+    (a - b) \bmod p &= (a \bmod p - b \bmod p) & \bmod p \\
+    (a \times b) \bmod p &= (a \bmod p \times b \bmod p) & \bmod p \\ 
+    a^b \bmod p &= {(a \bmod p)}^{b \bmod p} & \bmod p 
+    \end{align*}$$
+        
+2. Associative laws:
+
+    $$\begin{align*}
+    \big((a + b) \bmod p + c\big) \bmod p &= \big(a + (b+c)\bmod p\big) \bmod p  \\
+    \big((a \times b) \bmod p \times c\big) \bmod p &= \big(a \times (b \times c)\bmod p\big) \bmod p  \\
+    \end{align*}$$
+
+3. Distributive law with multiplication:
+
+   $$\begin{align*}
+    \big((a + b) \bmod p \times c\big) \bmod p &= \big( (a \times c) \bmod p + (b \times c)\bmod p\big) \bmod p  \\
+    \end{align*}$$
 
 Note that the division operation do not have the laws above.
 
@@ -38,7 +49,7 @@ For example, for the code below:
 // a is int[10]
 int i = 0;
 while(true) {
-    a[i] = i; // an example operation
+    a[i] = i;         // an example operation
     i = (i + 1) % 10; // increase i without index out of range
 }
 ```
