@@ -8,9 +8,9 @@ As for the simpler problem. We use $$DP[i][j]$$ denotes the count of subsequence
 ends in letter `j`. So we have:
 
 1. if `str[i] == 'a'`, $$DP[i][0] = DP[i - 1][0]\times 2 + 1.$$
-2. if `str[i] == 'b'`, $$DP[i][1] = DP[i - 1][1] + DP[i - 1][0].$$
-2. if `str[i] == 'c'`, $$DP[i][2] = DP[i - 1][2] + DP[i - 1][1].$$
-2. if `str[i] == 'd'`, $$DP[i][3] = DP[i - 1][3] + DP[i - 1][2].$$
+2. if `str[i] == 'b'`, $$DP[i][1] = DP[i - 1][1]\times 2 + DP[i - 1][0].$$
+2. if `str[i] == 'c'`, $$DP[i][2] = DP[i - 1][2]\times 2 + DP[i - 1][1].$$
+2. if `str[i] == 'd'`, $$DP[i][3] = DP[i - 1][3]\times 2 + DP[i - 1][2].$$
 
 The result is $$DP[n][3]$$.
 
