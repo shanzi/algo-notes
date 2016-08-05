@@ -1,8 +1,8 @@
 {
-  "gitbook": ">=2.0.0",
+  "gitbook": "=2.6.7",
   "title": "Algorithm Notes",
   "plugins": [
-    "katex",
+    "mathjax4us",
     "include-highlight"
   ]
 }
