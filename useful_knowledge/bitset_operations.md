@@ -61,7 +61,7 @@ int comb = (1 << k) - 1;
 while (comb < (1 << n)) {
     int x = comb & -comb;
     int y = comb + x;
-    comb = ((comb & -y) / x >> 1) | y;
+    comb = ((comb & ~y) / x >> 1) | y;
 }
 ```
 
