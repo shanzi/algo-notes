@@ -7,7 +7,7 @@ a linear time complexity.
 Let's say at first we pick two lines at two ends, at this time the container as the greatest width.
 If we are narrowing the width if container, we expect to improve height of lines at container's sides.
 So which end to move first? Let's say the two ends are `height[i]` and `height[j]`,
-if `height[i] > height[j]` and we move `i` to the right, `max(height[i], height[j])` won't increase,
+if `height[i] > height[j]` and we move `i` to the right, `min(height[i], height[j])` won't increase,
 so there is no point moving `i`. Conversely, if `height[i] < height[j]`, there is also no point
 moving `j` to left. So we always move the end of shorter height. If two sides are of the same height,
 we can move both.
@@ -16,8 +16,8 @@ Why is this algorithm correct? Let's way the container with most capacity is wit
 If there is a line `a'` is higher than `a` and in the left side of `a`, we can replace `a` with `a'`
 and get a bigger container. It is the same for `b`. So there must be:
 
-1. For any `i < a`, `height[i] <= height[a]`
-1. For any `j > b`, `height[j] <= height[b]`
+1. For any `i < a`, `height[i] < height[a]`
+1. For any `j > b`, `height[j] < height[b]`
 
 By repeatedly moving two ends, at some time we must have `i` or `j` at the position `a` or `b` first.
 Let's say `i` meet `a` first. We know that at this time `height[j]` must be less than `height[b]`, but we can also
